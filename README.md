@@ -5,40 +5,43 @@
 About :
 Codeigniter 4 CRUD Generator is a simple tool to automatically generate models, controllers and views from your tables. This tool is re-designed from the previous generator tool, Harviacode works for codeigniter 3. This tool will improve your writing code. This CRUD generator will perform complete CRUD operations, pagination, search, form *, ~~form validation, export to excel, and export to word~~. This CRUD generator uses bootstrap 4 style. You will still need to change the result code for more customization.
 
-## TASK lISH
+## TASK lISH :clock10:
 - [x] CRUD Generator 
 - [x] MODEL, VIEW, CONTROLER 
 - [ ] form validation
-- [ ] \(Optional) export excel
-- [ ] \(Optional) export word
-- [ ] \(Optional) export pdf
+- [ ] \(Optional) export excel :soon:
+- [ ] \(Optional) export word :soon:
+- [ ] \(Optional) export pdf :soon:
+
 #
+
 * generate textarea and text input only
-Codeigniter 4 CRUD Generator Please visit and like [blog.simeedun.com](blog.simeedun.com) for more info and PHP tutorials.
-* Codeigniter 3 CRUD Generator Please visit and like [harviacode.com](harviacode.com) for more info and PHP tutorials.
+:fire: Codeigniter 4 CRUD Generator Please visit and like [blog.simeedun.com](blog.simeedun.com) for more info and PHP tutorials.
+* :fire: Codeigniter 3 CRUD Generator Please visit and like [harviacode.com](harviacode.com) for more info and PHP tutorials.
 
 ## Preparation before using this Codeigniter 4 CRUD Generator (Important) :
 
-On Controller app/Controller/BaseController.php , load database library, session library and url helper
+On Controller `app/Controller/BaseController.php` , load `database library`, `session library` and `url helper`
 
-`protected $helpers = ['html','text','form','session'];`
+```
+protected $helpers = ['html','text','form','session'];
+```
 
-On file .env, set :
+On file `.env` setting DATABASE, Find `CTR+F`
 
-Find CTR+F DATABASE
 
-``
+```
 database.default.hostname = localhost
 database.default.database = database
 database.default.username = username
 database.default.password = password
 database.default.DBDriver = MySQLi
-``
+```
 
 #### Using this CRUD Generator :
 
 Simply put 'Ligatcode' folder,view folder, 'asset' folder and .htaccess file into your project root folder.
-Open http://localhost/({yourprojectname}/ligatcode.
+Open http://localhost/{yourprojectname}/ligatcode.
 Select table and push generate button.
 FAQ :
 
