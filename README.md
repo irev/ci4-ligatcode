@@ -12,7 +12,7 @@ Codeigniter 4 CRUD Generator is a simple tool to automatically generate models, 
 - [ ] \(Optional) export excel
 - [ ] \(Optional) export word
 - [ ] \(Optional) export pdf
-
+#
 * generate textarea and text input only
 Codeigniter 4 CRUD Generator Please visit and like [blog.simeedun.com](blog.simeedun.com) for more info and PHP tutorials.
 * Codeigniter 3 CRUD Generator Please visit and like [harviacode.com](harviacode.com) for more info and PHP tutorials.
@@ -20,9 +20,13 @@ Codeigniter 4 CRUD Generator Please visit and like [blog.simeedun.com](blog.sime
 ## Preparation before using this Codeigniter 4 CRUD Generator (Important) :
 
 On Controller app/Controller/BaseController.php , load database library, session library and url helper
-protected $helpers = ['html','text','form','session'];
+
+`protected $helpers = ['html','text','form','session'];`
+
 On file .env, set :
+
 Find CTR+F DATABASE
+
 ``
 database.default.hostname = localhost
 database.default.database = database
