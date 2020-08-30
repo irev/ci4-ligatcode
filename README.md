@@ -56,6 +56,8 @@ Error cannot Read, Update, Delete. Make sure your table have primary key.
 * construct (model, view and controller) for Codeigniter framework version 4.0.4
 * Support custom page layout, built-in features of Codeigniter 4 This feature only affects the Generator button, ignored in Generate All button
 
-@github/support What do you think about these updates?
+@github/radenrap What do you think about these updates?
+
+@radenrap/aci-harviacode
 
 © 2020-2020 blog.simeedun.com
