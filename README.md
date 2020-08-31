@@ -8,6 +8,7 @@ Codeigniter 4 CRUD Generator is a simple tool to automatically generate models, 
 ## TASK lISH :clock10:
 - [x] CRUD Generator 
 - [x] MODEL, VIEW, CONTROLER 
+- [x] Tabel Paging 
 - [ ] form validation
 - [ ] \(Optional) export excel :soon:
 - [ ] \(Optional) export word :soon:
