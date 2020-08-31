@@ -1,5 +1,5 @@
 <?php
-$ligat = new Ligat();
+$ligat = new Ligatcode();
 $result = array();
 
 if (isset($_POST['generate']))
@@ -51,7 +51,7 @@ if (isset($_POST['generate']))
         $all = $ligat->all_field($table_name);
 
         // generate
-        include 'core/create_config_pagination.php';
+        //include 'core/create_config_pagination.php';
         include 'core/create_controller.php';
         include 'core/create_model.php';
         if ($jenis_tabel == 'reguler_table') {
@@ -75,7 +75,7 @@ if (isset($_POST['generate']))
         $result[] = $result_view_read;
         //$result[] = $result_view_doc;
         //$result[] = $result_view_pdf;
-        $result[] = $result_config_pagination;
+        //$result[] = $result_config_pagination;
         //$result[] = $result_exportexcel;
         //$result[] = $result_pdf;
     } else

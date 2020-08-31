@@ -13,11 +13,13 @@ class " . $c . " extends BaseController
 	 * Class constructor.
      */	
     protected \$PageData;
-	protected \$Model; //Default Models Of this Controler
+    protected \$Model; //Default Models Of this Controler
+    protected \$pager;
 	public function __construct()
 	{
 		\$this->Model = new $m(); //Set Default Models Of this Controler
-		\$this->PageData = \$this->attributePage(); //Attribute Of Page
+        \$this->PageData = \$this->attributePage(); //Attribute Of Page
+        \$pager = \Config\Services::pager();
     }
     
     //ATRIBUTE THIS PAGE
@@ -35,7 +37,8 @@ class " . $c . " extends BaseController
 		\$data = [
 			'AttributePage' =>\$this->PageData,
 			'content' => 'Create Pages',
-			'data' => \$this->Model->findAll(),
+            'data' => \$this->Model->paginate(5, 'paging'),
+            'pager' => \$this->Model->pager
 		];
 		return view('$c_url/$v_list', \$data);
     }

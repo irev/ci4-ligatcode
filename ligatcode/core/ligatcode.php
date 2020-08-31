@@ -1,13 +1,12 @@
 <?php  //namespace CC ;
 use Dotenv\Dotenv as Dotenv;
-class Ligat
+class Ligatcode
 {
     private $host;
     private $user;
     private $password;
     private $database;
     private $sql;
-
 
 
     function __construct()
@@ -17,21 +16,18 @@ class Ligat
 
     function connection()
     {
-        
-        //$subject = file_get_contents('../../../app/config/Database.php');
-        //$string = str_replace("defined('BASEPATH') OR exit('No direct script access allowed');", "", $subject);
-        
-        //$con = 'core/connection.php';
-        //$con = ('../app/config/Database.php');
-        //$create = fopen($con, "w") or die("Change your permision folder for application and Ligat folder to 777");
-        //fwrite($create, $string);
-        //fclose($create);
-        
-        $dotenv = Dotenv::createImmutable('../');
-        $dotenv->load();
-        //var_dump($_ENV);
-
-        //require $con;
+        if(!parse_ini_file("../.env")){
+            echo "<center><br><br><h3>Environment Codeigniter 4 file  <b>.env</b> not found or not configuration. please check this file in your root folder.</h3>";
+            echo "<br><br><b>Please set this line:</b>";
+            echo "<br>database.default.hostname";
+            echo "<br>database.default.database";
+            echo "<br>database.default.username";
+            echo "<br>database.default.password";
+            echo "<br>database.default.hostname";
+            echo "<center>";
+            exit();
+        }
+        $_ENV = parse_ini_file("../.env");
         $this->host =  $_ENV["database.default.hostname"];      // ['hostname']; 
         $this->user = $_ENV ["database.default.username"];      //['username'];
         $this->password = $_ENV ["database.default.password"];  //['password'];
@@ -40,11 +36,9 @@ class Ligat
         $this->sql = new \mysqli($this->host, $this->user, $this->password, $this->database);
         if ($this->sql->connect_error)
         {
-            echo $this->sql->connect_error . ", please check 'app/config/database.php'.";
+            echo $this->sql->connect_error . ", please check 'app/Config/database.php'.";
             die();
         }
-        
-        //unlink($con);
     }
 
     function table_list()

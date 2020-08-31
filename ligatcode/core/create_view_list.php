@@ -65,6 +65,8 @@ $string .= "<td>
             <?php  endforeach; ?>
         </tbody>
     </table>
+    <!-- pagination -->
+    <?php echo \$pager->links('paging', 'ligatcode_pagination') ?>
 </div>
 <?= \$this->endSection(); ?>";
 
