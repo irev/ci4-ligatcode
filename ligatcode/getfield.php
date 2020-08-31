@@ -1,7 +1,6 @@
 <?php 
 error_reporting(0);
-require_once('vendor/autoload.php');
-require_once 'core/harviacode.php';
+require_once 'core/ligatcode.php';
 require_once 'core/helper.php';
 require_once 'core/process.php';
 ################################################################
@@ -17,10 +16,13 @@ require_once 'core/process.php';
  echo "<div class='alert alert-info'>";
  echo "<label>List Filed Of Table ". $_POST['table_name']."</label><br> <small>Please select the fields to be displayed<br>This feature only affects the <code>Generator</code> button, <br>ignored in <code>Generate All</code></small><hr>";
  $table_all_field = isset( $_POST['table_name'])? $ligat->all_field($_POST['table_name']) : '';
- //var_dump($table_all_field);
- //echo'<a id="check_show" class="check_show" href="#">Show All</a></br>';
  foreach  ($table_all_field as $field) {  
-    $check = $_POST['field_'.$field['column_name']] ==  '1' ? "checked" :'';  
+    if(isset($_POST['field_' . $field['column_name']])){
+        $fld =  $_POST['field_' . $field['column_name']];
+    }else{
+        $fld =  'field_'.$field['column_name'];
+    }
+    $check = ($fld ==  '1')? "checked" :'';  
     echo $_POST['table_name']; 
     if(isset($_POST['field_'.$field['column_name']]))
     { 
