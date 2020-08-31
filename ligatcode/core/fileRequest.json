@@ -1,0 +1,22 @@
+{
+    "app/Config/":{
+        "Pager.php": "app/Config/Pager.php"
+    },
+    "app/Views/layout/": {
+        "header.php": "app/Views/layout/header.php",
+        "footer.php": "app/Views/layout/footer.php",
+        "navbar.php": "app/Views/layout/navbar.php",
+        "sidebar.php": "app/Views/layout/sidebar.php",
+        "template.php": "app/Views/layout/template.php",
+        "ligatcode_pagination.php": "app/Views/layout/ligatcode_pagination.php"
+    },
+    "ligatcode":{
+        "Controler": "create_controller.php",
+        "Model": "create_model.php",
+        "View_Form": "create_view_form.php",
+        "View_List": "create_view_list.php",
+        "View_Read": "create_view_Read.php",
+        "ligatcode_pagination": "Pager.php"
+    }
+
+}
