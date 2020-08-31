@@ -1,5 +1,12 @@
 <?php
-
+$out = [];
+foreach ($all as $fd) {
+    $out[] = "'" . $fd['column_name'] . "'";
+} 
+if($pk==null){
+   // $f = explode(',', $out);
+    $pk = str_replace("'","",array_shift(($out)));
+}
 $string ="<?php namespace App\Models;
 /**
 * THIS CONTROLER CODEIGNITER 4
@@ -16,10 +23,7 @@ class $m extends Model
     //that you list all of the field names that can be changed during inserts and updates
     // https://codeigniter4.github.io/userguide/models/model.html#protecting-fields
     protected \$allowedFields = [";
-        $out=[];
-        foreach ($all as $fd) {
-            $out[] = "'".$fd['column_name']."'"; 
-        } 
+
         $string .= implode(',',$out);
 
 

@@ -45,6 +45,8 @@ if (isset($_POST['generate']))
         {
             mkdir($target . "views/" . $c_url, 0777, true);
         }
+       
+        
 
         $pk = $ligat->primary_field($table_name);
         $non_pk = $ligat->not_primary_field($table_name);
@@ -62,6 +64,22 @@ if (isset($_POST['generate']))
         }
         include 'core/create_view_form.php';
         include 'core/create_view_read.php';
+        
+        $structure = 'views/layout';
+        if (!file_exists('views/layout/')) {
+            if (!mkdir($structure, 0777, true)) {
+                die('Failed to create folders...');
+            }
+            //mkdir($target . "views/layout/", 0700); 
+        }
+        if(!is_dir($target."views/layout/")){
+            !mkdir($target . "views/layout/", 0700);
+            include 'core/create_view_layout_sidebar.php';
+            include 'core/create_view_layout_ligatcode_pagination.php';
+        }else{
+            include 'core/create_view_layout_sidebar.php';
+            include 'core/create_view_layout_ligatcode_pagination.php';
+        }
 
         $export_excel == 1 ? include 'core/create_exportexcel_helper.php' : '';
         $export_word == 1 ? include 'core/create_view_list_doc.php' : '';
@@ -73,6 +91,8 @@ if (isset($_POST['generate']))
         $result[] = $result_view_list;
         $result[] = $result_view_form;
         $result[] = $result_view_read;
+        $result[] = $result_view_layout_sidebar;
+        $result[] = $result_view_layout_ligatcode_pagination;
         //$result[] = $result_view_doc;
         //$result[] = $result_view_pdf;
         //$result[] = $result_config_pagination;
@@ -140,6 +160,7 @@ if (isset($_POST['generateall']))
         }
         include 'core/create_view_form.php';
         include 'core/create_view_read.php';
+        include 'core/create_views_layout_sidebar.php';
 
         $export_excel == 1 ? include 'core/create_exportexcel_helper.php' : '';
         $export_word == 1 ? include 'core/create_view_list_doc.php' : '';
@@ -151,9 +172,9 @@ if (isset($_POST['generateall']))
         $result[] = $result_view_list;
         $result[] = $result_view_form;
         $result[] = $result_view_read;
+        $result[] = $result_view_layout_sidebar;
         $result[] = $result_view_doc;
     }
-
     $result[] = $result_config_pagination;
     $result[] = $result_exportexcel;
     $result[] = $result_pdf;

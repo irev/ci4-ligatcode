@@ -1,23 +1,19 @@
-<!doctype html>
-<html>
-    <head>
-        <title>harviacode.com - codeigniter crud generator</title>
-        <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
-        <style>
-            body{
-                padding: 15px;
-            }
-        </style>
-    </head>
-    <body>
-        <h2 style="margin-top:0px">Menu Read</h2>
-        <table class="table">
-	    <tr><td>Name</td><td><?php echo $name; ?></td></tr>
-	    <tr><td>Link</td><td><?php echo $link; ?></td></tr>
-	    <tr><td>Icon</td><td><?php echo $icon; ?></td></tr>
-	    <tr><td>Is Active</td><td><?php echo $is_active; ?></td></tr>
-	    <tr><td>Is Parent</td><td><?php echo $is_parent; ?></td></tr>
-	    <tr><td></td><td><a href="<?php echo site_url('menu') ?>" class="btn btn-default">Cancel</a></td></tr>
-	</table>
-        </body>
-</html>
+<?= $this->extend('layout/template'); ?>
+<?= $this->section('content'); ?>
+
+<div class="row content">
+    <h1><?= $content; ?></h1>
+</div>
+<table class="table table-light table-striped">
+    <tbody>
+	    <tr><th width="15%">Name</th><td>: 	<?php echo $data['name']; ?></td></tr>
+	    <tr><th width="15%">Link</th><td>: 	<?php echo $data['link']; ?></td></tr>
+	    <tr><th width="15%">Icon</th><td>: 	<?php echo $data['icon']; ?></td></tr>
+	    <tr><th width="15%">Is Active</th><td>: 	<?php echo $data['is_active']; ?></td></tr>
+	    <tr><th width="15%">Is Parent</th><td>: 	<?php echo $data['is_parent']; ?></td></tr>
+</tbody>
+</table>
+    <div class="d-flex p-2 bd-highlight">
+        <a class="btn btn-sm btn-danger" href="<?= \base_url('menu') ?>">back</a>
+    </div>
+<?= $this->endSection(); ?>
