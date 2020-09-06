@@ -1,6 +1,5 @@
 <?php 
-//error_reporting(0);
-require_once('vendor/autoload.php');
+error_reporting(0);
 require_once 'core/ligatcode.php';
 require_once 'core/helper.php';
 require_once 'core/process.php';
