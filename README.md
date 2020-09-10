@@ -1,5 +1,5 @@
 # ci4-ligatcode
-
+[![](https://badgen.net/badge/icon/Website?icon=chrome&label)](https://blog.simeedun.com)
 
 ### Codeigniter 4 CRUD Generator 1.0 (only Codeigniter 4)
 About :
