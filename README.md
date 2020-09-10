@@ -1,6 +1,6 @@
 # ci4-ligatcode
 [![](https://badgen.net/badge/icon/Website?icon=chrome&label)](https://blog.simeedun.com)
-![](https://badgen.net/badge/license/MIT/blue)
+[![](https://badgen.net/badge/license/MIT/blue)](https://github.com/irev/ci4-ligatcode/blob/master/LICENSE)
 ### Codeigniter 4 CRUD Generator 1.0 (only Codeigniter 4)
 About :
 Codeigniter 4 CRUD Generator is a simple tool to automatically generate models, controllers and views from your tables. This tool is re-designed from the previous generator tool, Harviacode works for codeigniter 3. This tool will improve your writing code. This CRUD generator will perform complete CRUD operations, pagination, search, form *, ~~form validation, export to excel, and export to word~~. This CRUD generator uses bootstrap 4 style. You will still need to change the result code for more customization.
