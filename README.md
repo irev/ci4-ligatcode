@@ -2,6 +2,8 @@
 [![](https://badgen.net/badge/icon/Website?icon=chrome&label)](https://blog.simeedun.com)
 [![](https://badgen.net/badge/license/MIT/blue)](https://github.com/irev/ci4-ligatcode/blob/master/LICENSE)
 ![](https://badgen.net/github/commits/irev/ci4-ligatcode)
+![](https://badgen.net/github/last-commit/irev/ci4-ligatcode)
+![](https://badgen.net/github/status/irev/ci4-ligatcode/master)
 
 ### Codeigniter 4 CRUD Generator 1.0 (only Codeigniter 4)
 About :
